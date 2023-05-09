@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon battle</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo"
+        title="Pokemon"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2000px-International_Pok%C3%A9mon_logo.svg.png"
+        alt="Pokemon"
+      />
+    </header>
+
+    <main>
+      <section class="stadium">
+        <section class="enemy">
+          <div class="flash"></div>
+          <section class="pokemon_char">
+            <!-- <img
+              src="https://cdn.pixabay.com/photo/2018/04/13/16/13/pixel-3316924_1280.png"
+              alt="enemy"
+            /> -->
+            <img src="" alt="enemy" />
+            <aside class="data">
+              <h2>---</h2>
+              <div class="progress_bar">
+                <span class="hp">HP:</span>
+                <progress max="255" value="255"></progress>
+              </div>
+            </aside>
+          </section>
+        </section>
+
+        <section class="hero">
+          <div class="flash"></div>
+          <section class="pokemon_char">
+            <!-- <img
+              src="https://cdn.pixabay.com/photo/2018/04/13/16/13/pixel-3316924_1280.png"
+              alt="hero"
+            /> -->
+            <img src="" alt="my_pokemon" />
+
+            <aside class="data">
+              <h2>---</h2>
+              <div class="progress_bar">
+                <span class="hp">HP:</span>
+                <progress max="255" value="255"></progress>
+              </div>
+              <p>
+                <span class="status_hp">---/---</span>
+              </p>
+            </aside>
+          </section>
+        </section>
+      </section>
+
+      <div class="battle_info">
+        <div class="battle_pokemon_info">
+          <p class="messages typing">Elige tu pokemon, suerte!</p>
+        </div>
+
+        <div class="options">
+          <button class="options_button" id="pelear">Pelear</button>
+          <button class="options_button" id="pociones">Pociones</button>
+          <button class="options_button" id="huir">Huir</button>
+        </div>
+
+        <div class="options powers hidden" id="acciones">
+          <button class="options_button attack attack_1">Ataque 1</button>
+          <button class="options_button attack attack_2">Ataque 2</button>
+          <button class="options_button attack attack_3">Ataque 3</button>
+          <button class="options_button atras">Atrás</button>
+        </div>
+
+        <div class="options hidden" id="potions">
+          <button class="options_button curar">Curar 1/2</button>
+          <button class="options_button atras">Atrás</button>
+        </div>
+      </div>
+
+      <div class="chosse_pokemon">
+        <div class="instructions">
+          <p>Choose your hero</p>
+        </div>
+  
+        <div class="characters"></div>
+      </div>
+    </main>
+
+    
+    <script type="module" src="script.js"></script>
+
+    <audio id="audio-background" src="./sounds/battle_music.mp3" loop autoplay></audio>
+    <audio id="win_sound" src="./sounds/win.mp3"></audio>
+    <audio id="hit_sound" src="./sounds/hit.mp3"></audio>
+  </body>
+</html>

@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+html {
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* body {
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  font-size: 16px;
+  padding-top: 30px;
+} */
+
+/* {
+  background-color: burlywood;
+} */
+
+/* Header */
+
+header {
+  text-align: center;
+}
+
+header img {
+  height: 100px;
+  /* cursor: pointer; */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Stadium */
+
+.stadium {
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2fb2821a-1406-4a1d-9b04-6668f278e944/d83m36e-3b58ca48-fe8a-456e-9ffc-a5a84eca6613.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJmYjI4MjFhLTE0MDYtNGExZC05YjA0LTY2NjhmMjc4ZTk0NFwvZDgzbTM2ZS0zYjU4Y2E0OC1mZThhLTQ1NmUtOWZmYy1hNWE4NGVjYTY2MTMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.jOpoPaOypPatcb4k7flznTP9YiwUEX2q2BKoeWUPU74");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-color: #7dcd79; */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 20px 0 20px 0;
+  width: 50vw;
+}
+
+.stadium > section .data h2 {
+  margin: 0;
+  font-size: 17px;
+  font-size: 12px;
+}
+
+.pokemon_char .data {
+  background-color: aqua;
+  width: 15vw;
+  padding: 10px 2%;
+  top: 20%;
+  border-radius: 10px;
+}
+
+.pokemon_char .data p {
+  text-align: right;
+  margin: 0;
+  font-size: 10px;
+}
+
+.stadium progress {
+  width: 100%;
+  margin-left: 5px;
+}
+
+.progress_bar {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.progress_bar .hp {
+  font-size: 10px;
+}
+
+.pokemon_char img {
+  height: 100px;
+}
+
+/* .stadium > section {
+    display: block;
+} */
+
+.pokemon_char {
+  position: relative;
+  height: 100px;
+}
+
+.pokemon_char > * {
+  position: absolute;
+  /* text-transform: capitalize; */
+}
+
+.enemy {
+  margin-bottom: 120px;
+}
+
+/* Align images and pokemon data */
+.enemy img {
+  right: 10vw;
+}
+
+.enemy .data {
+  left: 7vw;
+}
+
+.hero img {
+  position: absolute;
+  left: 10vw;
+}
+
+.hero .data {
+  position: absolute;
+  right: 7vw;
+}
+
+/* Battle info and options */
+
+.battle_info {
+  display: flex;
+  align-items: center;
+  background-color: green;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 3px;
+  width: 50vw;
+}
+
+.battle_info > div {
+  background-color: aquamarine;
+  /* width: 100%; */
+  height: 130px;
+  border: black solid 2px;
+  border-radius: 15px;
+}
+
+.battle_pokemon_info {
+  padding: 3px;
+  width: 60%;
+  /* font-family: "Press Start 2P", cursive; */
+  font-size: 10px;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  width: 40%;
+  margin-left: 5px;
+  padding: 5px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* TODO: hacer los botones responsive que se acoplen al div options */
+.options button {
+  background-color: aliceblue;
+  font-size: 9px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  /* border: none; */
+  /* text-decoration: none; */
+  /* display: inline-block; */
+  /* transition-duration: 0.4s; */
+  /* user-select: none; */
+}
+
+.options_button:hover {
+  background-color: burlywood;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Typing animation */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(30) 1 forwards;
+}
+
+@media (max-width: 1140px) {
+    .stadium {
+        width: 90vw;
+    }
+
+    .battle_info {
+        width: 90vw;
+    }
+
+    .pokemon_char .data {
+        width: 30vw;
+    }
+}
+
+.custom-alert {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f44336;
+  color: white;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+/* Characters */
+.chosse_pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.characters {
+  display: flex;
+  justify-content: space-around;
+}
+
+.character_pokemon {
+  height: 100px;
+  margin: 0 20px 0 20px;
+  cursor: pointer;
+}
+
+.flash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.flash.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
